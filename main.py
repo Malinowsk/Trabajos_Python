@@ -1,55 +1,54 @@
-from paquete1.modulo1 import *
-from paquete1.modulo2 import *
+from package1.module1 import *
+from package1.module2 import *
 
-cliente1 = Client("Juan","juanrago2000@gmail.com",30,"+49-2494542379")
+client1 = Client("Juan","juanrago2000@gmail.com",30,"+49-2494542379")
+print(client1 + "\n")
 
-compra1 = cliente1.comprar("Sandia")
-if compra1 is not None:
+purchase1 = client1.buy("Sandia")
+if purchase1 is not None:
     print( "\nLa compra fue exitosa : ")
-    for dato in compra1:
-        print( "\t" + dato + " = " + str(compra1[dato]))
+    for data in purchase1:
+        print( "\t" + data + " = " + str(purchase1[data]))
 
-compra2 = cliente1.comprar("Manzana","12")
-if compra2 is not None:
+purchase2 = client1.buy("Manzana","12")
+if purchase2 is not None:
     print( "\nLa compra fue exitosa : ")
-    for dato in compra2:
-        print( "\t" + dato + " = " + str(compra2[dato]))
+    for data in purchase2:
+        print( "\t" + data + " = " + str(purchase2[data]))
 
-compra3 = cliente1.comprar("Anana",2)
-if compra3 is not None:
+purchase3 = client1.buy("Anana",2)
+if purchase3 is not None:
     print( "\nLa compra fue exitosa : ")
-    for dato in compra3:
-        print( "\t" + dato + " = " + str(compra3[dato]))
+    for data in purchase3:
+        print( "\t" + data + " = " + str(purchase3[data]))
 
-compra4 = cliente1.comprar("Manzana",6)
-if compra4 is not None:
+purchase4 = client1.buy("Manzana",6)
+if purchase4 is not None:
     print( "\nLa compra fue exitosa : ")
-    for dato in compra4:
-        print( "\t" + dato + " = " + str(compra4[dato]))
+    for data in purchase4:
+        print( "\t" + data + " = " + str(purchase4[data]))
 
-compra5 = cliente1.comprar("Manzana","2w")
-if compra5 is not None:
+purchase5 = client1.buy("Manzana","2w")
+if purchase5 is not None:
     print( "\nLa compra fue exitosa : ")
-    for dato in compra5:
-        print( "\t" + dato + " = " + str(compra5[dato]))
+    for data in purchase5:
+        print( "\t" + data + " = " + str(purchase5[data]))
 
-print( "\nCantidad historica de total de Manzanas compradas = " + str(cliente1.cant_producto_comprados("Manzana")) + "\n")
+print( "\nCantidad historica de total de Manzanas compradas = " + str(client1.number_product_purchased("Manzana")) + "\n")
 
-print( "\nCantidad historica de total de Melones comprados = " + str(cliente1.cant_producto_comprados("Melon")) + "\n")
+print( "\nCantidad historica de total de Melones comprados = " + str(client1.number_product_purchased("Melon")) + "\n")
 
-
-ultima_compra = cliente1.obtener_ult_compra();
+last_purchase = client1.get_last_purchase();
 print( "\nLa última compra del cliente es : \n")
-for dato in ultima_compra:
-    print( "\t" + dato + " = " + str(ultima_compra[dato]))
-
+for data in last_purchase:
+    print( "\t" + data + " = " + str(last_purchase[data]))
 
 """
 #correspondiente al modulo2 (pre-entrega1)
 
 crear_registro() # Se crea un registro
 
-mostrar_datos() # Se imprime todos los datos de los usuarios
+mostrar_datas() # Se imprime todos los datas de los usuarios
 
 login() # Ejecución del procedimiento de logeo
 """
