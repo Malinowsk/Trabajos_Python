@@ -2,7 +2,7 @@ from package1.module1 import *
 from package1.module2 import *
 
 client1 = Client("Juan","juanrago2000@gmail.com",30,"+49-2494542379")
-print(client1 + "\n")
+print(f"{client1}\n")
 
 purchase1 = client1.buy("Sandia")
 if purchase1 is not None:
@@ -10,7 +10,7 @@ if purchase1 is not None:
     for data in purchase1:
         print( "\t" + data + " = " + str(purchase1[data]))
 
-purchase2 = client1.buy("Manzana","12")
+purchase2 = client1.buy("Manzana", 12)
 if purchase2 is not None:
     print( "\nLa compra fue exitosa : ")
     for data in purchase2:
