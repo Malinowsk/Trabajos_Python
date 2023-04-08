@@ -12,15 +12,12 @@ class Client:
         self.shopping = []
 
     def buy(self, product , number = 1):
-        if (type(number)==int):
-            purchase = { "code" : ''.join(random.choices(string.ascii_uppercase + string.digits, k=15)), # Genera una cadena aleatoria de 15 caracteres
-                        "product" : product , 
-                        "number" : int(number) , 
-                        "date" : datetime.date.today().strftime("%d/%m/%Y") }
-            self.shopping.append(purchase)
-            return purchase
-        else:
-            return None
+        purchase = { "code" : ''.join(random.choices(string.ascii_uppercase + string.digits, k=15)), # Genera una cadena aleatoria de 15 caracteres
+                    "product" : product , 
+                    "number" : int(number) , 
+                    "date" : datetime.date.today().strftime("%d/%m/%Y") }
+        self.shopping.append(purchase)
+        return purchase
    
     def get_last_purchase(self):
         return self.shopping[-1] if len(self.shopping) > 0 else None
