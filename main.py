@@ -60,6 +60,7 @@ else:
     print( f"\nEl cliente {client2.name} no ha realizado compras. \n")
 
 
+
 """
 #correspondiente al modulo2.py (pre-entrega1)
 
