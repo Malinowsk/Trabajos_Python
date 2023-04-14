@@ -1,9 +1,10 @@
 from package1.client import *
 from package1.pre_delivery_1 import *
 
-print( "\n ///////////////////////////// Ejemplo Cliente Juan ////////////////////////////////// \n")
 
-client1 = Client("Juan","juanrago2000@gmail.com",30,"+49-2494542379")
+client1 = Client("Rafael","rafa@gmail.com",21,"+49-2494541212")
+
+print( f"\n\n////////////////////// Ejemplo Cliente {client1.name} ///////////////////////////\n")
 
 print(f"\n{client1}\n")
 
@@ -45,9 +46,10 @@ else:
     print( f"\nEl cliente {client1.name} no ha realizado compras : \n")
 
 
-print( "\n //////////////////////////// Ejemplo Cliente Rafael ////////////////////////////////// \n")
 
-client2 = Client("Rafael","rafa@gmail.com",21,"+49-2494541212")
+client2 = Client("Juan","juanrago2000@gmail.com",30,"+49-2494542379")
+
+print( f"\n\n////////////////////// Ejemplo Cliente {client2.name} ///////////////////////////")
 
 print(f"\n\n{client2}\n")
 
