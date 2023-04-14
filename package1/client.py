@@ -1,14 +1,12 @@
+from package1.person import *
 import datetime
 import random
 import string
 
-class Client:
+class Client(Person):
 
     def __init__(self, name, email, age, phone):
-        self.name = name
-        self.email = email
-        self.age = age
-        self.phone = phone
+        super().__init__(name, email, age, phone)
         self.shopping = []  # almacenamiento de las compras que realizó el cliente
 
     def buy(self, product , price ,  number = 1):

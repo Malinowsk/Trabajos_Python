@@ -1,5 +1,7 @@
-from package1.module1 import *
-from package1.module2 import *
+from package1.client import *
+from package1.pre_delivery_1 import *
+
+print( "\n ///////////////////////////// Ejemplo Cliente Juan ////////////////////////////////// \n")
 
 client1 = Client("Juan","juanrago2000@gmail.com",30,"+49-2494542379")
 
@@ -13,19 +15,19 @@ for data in purchase1:
 
 purchase2 = client1.buy(product="Manzana", price= 5.00 , number= "12")
 
-print( f"\nDatos de la compra realizada {client1.name} : ")
+print( f"\nDatos de la compra realizada por {client1.name} : ")
 for data in purchase2:
     print( "\t" + data + " = " + str(purchase2[data]))
 
 purchase3 = client1.buy(product= "Anana", price= 55.90)
 
-print( f"\nDatos de la compra realizada {client1.name} : ")
+print( f"\nDatos de la compra realizada por {client1.name} : ")
 for data in purchase3:
     print( "\t" + data + " = " + str(purchase3[data]))
 
 purchase4 = client1.buy(product="Manzana", price= 5.00 , number= 6)
 
-print( f"\nDatos de la compra realizada {client1.name} : ")
+print( f"\nDatos de la compra realizada por {client1.name} : ")
 for data in purchase4:
     print( "\t" + data + " = " + str(purchase4[data]))
 
@@ -42,6 +44,8 @@ if last_purchase != None:
 else:
     print( f"\nEl cliente {client1.name} no ha realizado compras : \n")
 
+
+print( "\n //////////////////////////// Ejemplo Cliente Rafael ////////////////////////////////// \n")
 
 client2 = Client("Rafael","rafa@gmail.com",21,"+49-2494541212")
 
@@ -62,7 +66,7 @@ else:
 
 
 """
-#correspondiente al modulo2.py (pre-entrega1)
+#correspondiente a pre_delivery_1.py (pre-entrega1)
 
 create_register() # Se crea un registro
 
